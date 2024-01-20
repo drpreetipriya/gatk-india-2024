@@ -10,4 +10,6 @@ services:
       - "8888:8888"
     volumes:
       - ./workspace:/home/jupyter
+    environment:
+      - WORKSPACE_BUCKET=gs://fc-b426f92d-adf2-45bc-a714-69ee3db2ba38
     command: "jupyter notebook --allow-root --ip 0.0.0.0 --no-browser"
